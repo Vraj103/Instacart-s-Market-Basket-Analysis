@@ -1,3 +1,4 @@
+# Association Rules Function
 def association_rules(order_item, min_support):
     print("Starting order_item: {:22d}".format(len(order_item)))
 

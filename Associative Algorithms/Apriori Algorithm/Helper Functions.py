@@ -1,4 +1,3 @@
-# %% [code] {"execution":{"iopub.status.busy":"2025-03-06T18:17:11.013630Z","iopub.execute_input":"2025-03-06T18:17:11.014047Z","iopub.status.idle":"2025-03-06T18:17:11.019838Z","shell.execute_reply.started":"2025-03-06T18:17:11.014010Z","shell.execute_reply":"2025-03-06T18:17:11.018271Z"}}
 import pandas as pd
 import numpy as np
 from mlxtend.preprocessing import TransactionEncoder
@@ -10,7 +9,6 @@ from itertools import combinations, groupby
 from collections import Counter
 from IPython.display import display
 
-# %% [markdown]
 """Helper functions
 
 1) freq: calculates frequency for items
@@ -40,15 +38,15 @@ def get_item_pairs(order_item, num_items=2):
         for item_pair in combinations(item_list,num_items):
             yield item_pair
 
-#An Example
-#df = pd.DataFrame({
+"""An Example
+df = pd.DataFrame({
      #"order_id": [1, 1, 1, 2, 2],
      #"item": ['apple', 'egg', 'milk', 'egg', 'milk']
 })
 
-#pairs = list(get_item_pairs(df, num_items=2))
-#print(pairs)
-#print(next(get_item_pairs(orders)))"""
+pairs = list(get_item_pairs(df, num_items=2))
+print(pairs)
+print(next(get_item_pairs(orders)))"""
 
 #Returns frequency and support associated with item
 def merge_item_stats(item_pairs, item_stats):
